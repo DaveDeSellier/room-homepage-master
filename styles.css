@@ -98,250 +98,34 @@ select {
 
 /* Globals */
 
+main {
+  font-family: var(--ff);
+}
+
 a {
   text-decoration: none;
 }
 
-/* Ultilities */
-
-.container-grid {
-  display: grid;
-  grid-template-columns: 1fr 0.7fr;
-  position: relative;
-}
-
-.container-flex {
-  display: flex;
-}
-
-.container-grid-3 {
-  display: grid;
-  grid-template-columns: 0.6fr 1fr 0.6fr;
-}
-
-/* Nav */
-
-nav {
-  position: relative;
-  background-image: url(./images/desktop-image-hero-1.jpg);
-  padding: 22em;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 0;
-  background-color: black;
-}
-
-ul {
-  position: absolute;
-  padding: 0;
-  top: 2em;
-  left: 5em;
-
-  display: flex;
-  gap: 1em;
-}
-
-ul li {
+li {
   list-style: none;
-  align-self: center;
 }
 
-ul li a {
-  text-decoration: none;
-  color: var(--clr-white);
-  font-weight: var(--fw-600);
+/* Utilities */
+
+.grid-container {
+  display: grid;
 }
 
-ul li img {
-  display: block;
-  margin-right: 3em;
+section + img {
+  width: 100%;
 }
 
-/* Section Top Right */
+/* Styles */
 
-div > section:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.section2-spacing {
-  margin-top: auto;
-  padding-right: 10em;
-  padding-left: 10em;
-}
-
-.section2-spacing > h2 {
-  line-height: 1.1em;
-  font-size: 3.2rem;
-  font-weight: var(--fw-700);
-  margin-bottom: 0.5em;
-}
-
-.section2-spacing > p {
-  line-height: 1.7em;
-  color: var(--clr-dark-gray);
-}
-
-.shop-now-container {
-  margin-top: 1em;
-}
-
-.shop-now-container > a {
-  color: var(--clr-black);
-  font-size: 1.3rem;
-  padding-right: 1rem;
-  letter-spacing: 1rem;
-}
-
-img {
-  display: inline;
-}
-
-.nav-icons {
-  margin-top: auto;
-  align-self: flex-start;
-  display: flex;
-  justify-content: center;
-  font-size: 3rem;
-  background-color: black;
-  color: white;
-  padding: 1rem;
-  width: 33.8%;
-}
-
-span {
-  flex: 1;
-  text-align: center;
-}
-
-/* Bottom Grid */
-
-.container-grid-3 > section {
-  grid-column: 2;
-  padding: 5em;
-}
-
-.container-grid-3 > section > h2 {
-  font-weight: var(--fw-500);
-  line-height: 2.2em;
-  letter-spacing: 0.5rem;
-}
-
-.container-grid-3 > section > p {
-  color: var(--clr-dark-gray);
-}
-
-.container-grid-3::before {
-  content: "";
-  background-image: url(./images/image-about-dark.jpg);
+section:first-child {
+  background-image: url(./images/desktop-image-hero-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.container-grid-3::after {
-  content: "";
-  background-image: url(./images/image-about-light.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* Media queries */
-
-@media (max-width: 375px) {
-  .container-grid {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: static;
-  }
-
-  .container-grid {
-    position: static;
-  }
-
-  .container-grid > section:first-child {
-    position: static;
-  }
-
-  .section2-spacing {
-    flex: 1;
-    padding: 2rem;
-    margin: 0;
-    margin-top: auto;
-  }
-
-  nav {
-    padding: 10em;
-    background-image: url(./images/mobile-image-hero-1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left;
-    max-width: 100%;
-    position: relative;
-  }
-
-  ul {
-    display: none;
-    position: static;
-  }
-
-  .nav-icons {
-    position: absolute;
-    right: 0;
-    top: 8em;
-    font-size: 2rem;
-    padding: 0.5rem;
-  }
-
-  .section2-spacing > h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .section2-spacing > p {
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-  }
-
-  .shop-now-container {
-    font-size: 1rem;
-  }
-
-  .shop-now-container > a {
-    letter-spacing: 8px;
-  }
-
-  .container-grid-3 {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .container-grid-3 > section {
-    padding: 2rem;
-  }
-
-  .container-grid-3 > section > h2 {
-    padding: 0;
-    line-height: 1em;
-    letter-spacing: 0.2rem;
-    font-size: 1rem;
-  }
-
-  .container-grid-3 > section > p {
-    color: var(--clr-dark-gray);
-    margin-top: 1em;
-    font-size: 0.8rem;
-    line-height: 1.5rem;
-  }
-
-  .container-grid-3::before {
-    padding: 5em;
-    background-size: cover;
-  }
-
-  .container-grid-3::after {
-    padding: 5em;
-    background-size: cover;
-  }
+  background-position: bottom;
+  aspect-ratio: 1.5/1;
 }
