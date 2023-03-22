@@ -102,30 +102,67 @@ main {
   font-family: var(--ff);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   text-decoration: none;
 }
 
 li {
   list-style: none;
-}
-
-/* Utilities */
-
-.grid-container {
-  display: grid;
+  font-size: 1rem;
 }
 
 section + img {
   width: 100%;
 }
 
+/* Utilities */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.stacked {
+  display: grid;
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
 /* Styles */
 
-section:first-child {
-  background-image: url(./images/desktop-image-hero-1.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  aspect-ratio: 1.5/1;
+section.stacked > img {
+  width: 100%;
+}
+
+ul {
+  margin-top: 3.5rem;
+}
+
+.img-wrapper {
+  display: flex;
+}
+
+.img-wrapper > li:first-child {
+  flex-basis: 12%;
+}
+
+.img-wrapper > li:first-child > img {
+  margin-left: auto;
+}
+
+.img-wrapper > li:last-child {
+  padding-right: 3em;
+  margin: auto;
+}
+
+ul > li > a {
+  display: none;
 }
