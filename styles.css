@@ -129,6 +129,8 @@ section + img {
 
 .stacked {
   display: grid;
+  position: relative;
+  height: 360px;
 }
 
 .stacked > * {
@@ -138,8 +140,22 @@ section + img {
 
 /* Styles */
 
-section.stacked > img {
+.img-container {
+  position: relative;
+}
+
+.img-container > img {
   width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.current-picture {
+  width: 100%;
+}
+
+.img-container > img:first-child {
+  z-index: 1;
 }
 
 ul {
@@ -148,21 +164,89 @@ ul {
 
 .img-wrapper {
   display: flex;
+  width: 100%;
+}
+
+.img-wrapper > li {
+  z-index: 1;
 }
 
 .img-wrapper > li:first-child {
-  flex-basis: 12%;
-}
-
-.img-wrapper > li:first-child > img {
-  margin-left: auto;
+  padding-left: 2rem;
 }
 
 .img-wrapper > li:last-child {
-  padding-right: 3em;
+  padding-right: 3rem;
   margin: auto;
 }
 
 ul > li > a {
   display: none;
+}
+
+.nav-arrows {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  gap: 2rem;
+  z-index: 1;
+}
+
+.nav-arrows > button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Section 2 */
+.grid-container > section:nth-child(2) {
+  padding: 2.5rem;
+}
+
+.grid-container > section:nth-child(2) > h2 {
+  font-weight: var(--fw-700);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.grid-container > section:nth-child(2) > p {
+  color: var(--clr-dark-gray);
+  font-weight: var(--fw-500);
+  margin-bottom: 1.5rem;
+}
+
+.grid-container > section:nth-child(2) > a,
+img {
+  display: inline;
+}
+
+.grid-container > section:nth-child(2) > a {
+  letter-spacing: 0.6rem;
+  color: var(--clr-black);
+  font-weight: var(--fw-500);
+  margin-right: 0.5rem;
+}
+
+/* Section 4 */
+.grid-container > section:nth-child(4) {
+  padding: 2.5rem;
+}
+
+.grid-container > section:nth-child(4) > h2 {
+  font-weight: var(--fw-500);
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  letter-spacing: 0.2rem;
+}
+
+.grid-container > section:nth-child(4) > p {
+  color: var(--clr-dark-gray);
+  font-weight: var(--fw-500);
+  font-size: 1rem;
 }

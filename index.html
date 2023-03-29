@@ -18,17 +18,26 @@
       href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script type="module" src="script.js"></script>
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
     <main>
       <div class="grid-container">
         <section class="stacked">
-          <img src="/images/mobile-image-hero-1.jpg" alt="">
+          <div class="img-container">
+            <img
+              class="current-picture"
+              src="/images/mobile-image-hero-1.jpg"
+              alt=""
+            />
+            <img src="/images/mobile-image-hero-2.jpg" alt="" />
+            <img src="/images/mobile-image-hero-3.jpg" alt="" />
+          </div>
           <nav>
             <ul>
               <div class="img-wrapper">
-                <li><img src="./images/icon-hamburger.svg" alt=""></li>
+                <li><img src="./images/icon-hamburger.svg" alt="" /></li>
                 <li><img src="./images/logo.svg" alt="Room" /></li>
               </div>
               <li><a href="#">home</a></li>
@@ -37,9 +46,17 @@
               <li><a href="#">contact</a></li>
             </ul>
           </nav>
+          <div class="nav-arrows">
+            <button id="previous-button" type="submit">
+              <img src="./images/icon-angle-left.svg" alt="" />
+            </button>
+            <button id="next-button" type="submit">
+              <img src="./images/icon-angle-right.svg" alt="" />
+            </button>
+          </div>
         </section>
         <section>
-          <h2>Discover innovative <br>ways to decorate</br></h2>
+          <h2>Discover innovative ways to decorate</h2>
           <p>
             We provide unmatched quality, comfort, and style for property owners
             across the country. Our experts combine form and function in
@@ -48,21 +65,21 @@
             you love.
           </p>
           <a href="#">SHOP NOW</a>
-          <img src="./images/icon-arrow.svg" alt="">
+          <img src="./images/icon-arrow.svg" alt="" />
         </section>
-        <img src="./images/image-about-dark.jpg" alt="">
+        <img src="./images/image-about-dark.jpg" alt="" />
         <section>
           <h2>ABOUT OUR FURNITURE</h2>
           <p>
-            Our multifunctional collection blends design and function to suit your
-            individual taste. Make each room unique, or pick a cohesive theme that
-            best express your interests and what inspires you. Find the furniture
-            pieces you need, from traditional to contemporary styles or anything
-            in between. Product specialists are available to help you create your
-            dream space.
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
           </p>
         </section>
-        <img src="./images/image-about-light.jpg" alt="">
+        <img src="./images/image-about-light.jpg" alt="" />
       </div>
     </main>
 
