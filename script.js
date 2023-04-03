@@ -3,13 +3,6 @@ const pictureArr = Array.from(pictures.children);
 const prevButton = document.getElementById("previous-button");
 const nextButton = document.getElementById("next-button");
 
-const pictureWidth = pictureArr[0].clientWidth;
-
-//Lay images out next to each other
-pictureArr.forEach((picture, index) => {
-    picture.style.left = `${pictureWidth * index}px`
-});
-
 //When I click previous button, the previous image is shown, if it exists
 prevButton.addEventListener('click', () => {
     let currentPicture = document.querySelector('.current-picture');
@@ -19,9 +12,8 @@ prevButton.addEventListener('click', () => {
     }
 
     let nextPicture = currentPicture.previousElementSibling;
-    const amountToMove = nextPicture.style.left;
-
-    pictures.style.transform = `translateX(${'-' + amountToMove})`
+    currentPicture.style.zIndex = 0;
+    nextPicture.style.zIndex = 1;
 
     currentPicture.classList.remove('current-picture');
     nextPicture.classList.add('current-picture');
@@ -37,9 +29,8 @@ nextButton.addEventListener('click', () => {
     }
 
     let nextPicture = currentPicture.nextElementSibling;
-    const amountToMove = nextPicture.style.left;
-
-    pictures.style.transform = `translateX(${'-' + amountToMove})`
+    currentPicture.style.zIndex = 0;
+    nextPicture.style.zIndex = 1;
 
     currentPicture.classList.remove('current-picture');
     nextPicture.classList.add('current-picture');

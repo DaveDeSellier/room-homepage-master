@@ -28,7 +28,11 @@
           <div class="img-container">
             <img
               class="current-picture"
-              src="/images/mobile-image-hero-1.jpg"
+              srcset="
+                /images/mobile-image-hero-1.jpg  540w,
+                /images/desktop-image-hero-1.jpg 800w
+              "
+              src="/images/mobile-image-hero-1.jpg "
               alt=""
             />
             <img src="/images/mobile-image-hero-2.jpg" alt="" />
@@ -82,7 +86,6 @@
         <img src="./images/image-about-light.jpg" alt="" />
       </div>
     </main>
-
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
