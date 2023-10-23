@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="script.js"></script>
+    <title>Frontend Mentor | Room homepage</title>
+  </head>
+  <body>
+    <main>
+      <div class="grid-container">
+        <section class="stacked">
+          <div class="img-container">
+            <img
+              class="current-picture"
+              srcset="
+                /images/mobile-image-hero-1.jpg  540w,
+                /images/desktop-image-hero-1.jpg 800w
+              "
+              src="/images/mobile-image-hero-1.jpg "
+              alt=""
+            />
+            <img src="/images/mobile-image-hero-2.jpg" alt="" />
+            <img src="/images/mobile-image-hero-3.jpg" alt="" />
+          </div>
+          <nav>
+            <ul>
+              <div class="img-wrapper">
+                <li><img src="./images/icon-hamburger.svg" alt="" /></li>
+                <li><img src="./images/logo.svg" alt="Room" /></li>
+              </div>
+              <li><a href="#">home</a></li>
+              <li><a href="#">shop</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
+          <div class="nav-arrows">
+            <button id="previous-button" type="submit">
+              <img src="./images/icon-angle-left.svg" alt="" />
+            </button>
+            <button id="next-button" type="submit">
+              <img src="./images/icon-angle-right.svg" alt="" />
+            </button>
+          </div>
+        </section>
+        <section>
+          <h2>Discover innovative ways to decorate</h2>
+          <p>
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+          <a href="#">SHOP NOW</a>
+          <img src="./images/icon-arrow.svg" alt="" />
+        </section>
+        <img src="./images/image-about-dark.jpg" alt="" />
+        <section>
+          <h2>ABOUT OUR FURNITURE</h2>
+          <p>
+            Our multifunctional collection blends design and function to suit
+            your individual taste. Make each room unique, or pick a cohesive
+            theme that best express your interests and what inspires you. Find
+            the furniture pieces you need, from traditional to contemporary
+            styles or anything in between. Product specialists are available to
+            help you create your dream space.
+          </p>
+        </section>
+        <img src="./images/image-about-light.jpg" alt="" />
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">David DeSellier</a>.
+    </div>
+  </body>
+</html>
